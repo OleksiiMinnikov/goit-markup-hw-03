@@ -41,6 +41,19 @@ ul {
     padding-left: 0;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     color: var(--tex-color);
@@ -99,6 +112,10 @@ body {
     border-bottom: 1px solid var(--cornflower);
 
 }
+.header-container {
+    display: flex;
+    align-items: center;
+}
 .header-list{
     gap: 40px;
 }
@@ -106,11 +123,6 @@ body {
     display: flex;
     align-items: center;
     margin-right: auto;
-}
-
-.header-container {
-    display: flex;
-    align-items: center;
 }
 
 .header-logo{
@@ -217,44 +229,45 @@ body {
 
 .hero-button:hover,
 .hero-button:focus { 
-     background-color: var(--ocean-color);
+    background-color: var(--ocean-color);
 }
 
 
 /*********** SECTION_2_STRATEGY ***********/
 .strategy{
-    margin-top: 120px;
-    
+    padding-top: 120px;  
+} 
+.strategy-item{
+    flex-direction: row;
+    flex-basis: calc((100% - 3 * 24) / 4);
 }
+
+
 .strategy-sub{
     min-width: 264px;
     align-items: baseline;
-    gap: 24px;
+    gap: 24px;  
 }
 .stratrgy-li{
     min-width: 264px;
     align-items: baseline;
     gap: 24px;
 }
+
 .strategy-txt{
     margin-top: 8px;
-    
-
 }
 
 /*********** SECTION_3_STRATEGY ***********/
 .doing{
-    margin-top: 120px;
-    
+    margin-top: 120px;  
 }
 
 .doing-list{
     list-style: none;
     margin-top: 72px;
     display: flex;
-    gap: 24px;
-    
-
+    gap: 24px;    
 }
 
 
@@ -262,34 +275,34 @@ body {
 .team{
     background-color: var(--cloud);
     margin-top: 120px;
+    padding-top: 120px;
     padding-bottom: 120px;
     
 }
-.team-title{
-    padding-top: 120px;
-        border-radius: 0px 0px 4px 4px;
-}
+
 .team-company{
+    margin-top: 72px;
     display: flex;
     gap: 24px;
     align-items: baseline;
-    
-
 }
+
 .team-people{
     background-color: var(--background-color);
-    margin-top: 72px;
     text-align: center;
     border-radius: 0px 0px 4px 4px;
       
 }
-.team-sub{
+.team-item{
     padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.team-sub{
     align-items: baseline;
 }
 .team-tex{
-    padding-top: 8px;
-    padding-bottom: 32px;
+    margin-top: 8px;
     align-items: baseline;
     
 
@@ -298,13 +311,15 @@ body {
 
 /*********** PAGEST PORTFOLIO ***********/
 /*********** BUTTON PORTFOLIO ***********/
-.filter-but{
+.portfolio-filter{
     margin-top: 96px;
+    padding: 12px 24px;
+}
+.filter-but{
+    
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 12px 24px;
     gap: 24px;
     
 
@@ -335,7 +350,7 @@ body {
     color: var(--portfolio-bg-focus);
     border: 1px solid transparent;
 }
-
+/*********** SECTION PORTFOLIO ***********/
 .section-portfolio{
     margin-top: 72px;
     display: flex;
@@ -350,17 +365,11 @@ body {
     border-right: 1px solid var(--cornflower);
     border-bottom: 1px solid var(--cornflower);
     border-left: 1px solid var(--cornflower);
-    
+    padding: 32px 16px;
+}
 
-}
-.portfolio-sub{
-    padding-top: 32px;
-    padding-left: 16px;
-}
 .portfolio-txt{
-    padding-top: 8px;
-    padding-bottom: 32px;
-    padding-left: 16px;
+    margin-top: 8px;
 }
 /*********** FOOTER ***********/
 .footer {
@@ -385,13 +394,12 @@ body {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--cornflower);
-}
 
-.footer-txt{
     margin-top: 16px;
     width: 264px;
     height: 72px;
 }
+
 .footer-logo-hi {
     color: var(--cloud);
 }
