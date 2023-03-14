@@ -24,6 +24,7 @@
     margin: 0 auto;
     
 
+
 }
 
 h1,
@@ -34,6 +35,12 @@ h5,
 h6,
 p {
     margin: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 ul {
@@ -260,7 +267,8 @@ body {
 
 /*********** SECTION_3_STRATEGY ***********/
 .doing{
-    margin-top: 120px;  
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 
 .doing-list{
@@ -274,7 +282,6 @@ body {
 /*********** SECTION_4_TEAM ***********/
 .team{
     background-color: var(--cloud);
-    margin-top: 120px;
     padding-top: 120px;
     padding-bottom: 120px;
     
@@ -313,7 +320,7 @@ body {
 /*********** BUTTON PORTFOLIO ***********/
 .portfolio-filter{
     margin-top: 96px;
-    padding: 12px 24px;
+   
 }
 .filter-but{
     
@@ -351,13 +358,17 @@ body {
     border: 1px solid transparent;
 }
 /*********** SECTION PORTFOLIO ***********/
+.portfolio{
+    padding-bottom: 120px;  
+}
+
 .section-portfolio{
     margin-top: 72px;
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
-    padding-bottom: 120px;
-
+    /* gap: 24px; */
+    row-gap: 48px;
+    column-gap: 24px;
 }
 
 
